@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PdfiumKit Web Demo</title>
+    <link rel="stylesheet" href="styles.css?v=62" />
+  </head>
+  <body>
+    <header class="toolbar">
+      <div class="left">
+        <button id="prevPage" title="Previous Page">◀</button>
+        <span id="pageInfo">Page <input id="pageInput" type="number" min="1" value="1" style="width:4em">/<span id="pageCount">0</span></span>
+        <button id="nextPage" title="Next Page">▶</button>
+        <button id="gotoPage" title="Go to Page">Go</button>
+      </div>
+      <div class="center">
+        <input type="file" id="fileInput" accept="application/pdf" hidden style="display:none" aria-hidden="true" />
+        <button id="openPdf">Open PDF</button>
+        <button id="zoomOut">-</button>
+        <span id="zoomLabel">100%</span>
+        <button id="zoomIn">+</button>
+      </div>
+      <div class="right">
+        <button data-tool="highlight" title="Highlight">🖍️</button>
+        <button data-tool="text" title="Text">T</button>
+        <button data-tool="draw" title="Draw">✎</button>
+        <button data-tool="signature" title="Signature">✒</button>
+        <button data-tool="none" title="Pan/Select">🖐</button>
+        <button id="inspect">ℹ</button>
+        <button id="flatten" title="Flatten">🧱</button>
+        <button id="save" title="Save">💾</button>
+      </div>
+    </header>
+
+    <main>
+      <div id="status" class="status" hidden></div>
+      <div id="stage">
+        <div id="pageBox">
+          <canvas id="pageCanvas"></canvas>
+          <canvas id="overlayCanvas"></canvas>
+        </div>
+      </div>
+      <pre id="inspector" hidden></pre>
+    </main>
+
+    <div id="signatureModal" class="modal" hidden style="display:none" aria-hidden="true">
+      <div class="modal-content">
+        <h3>Draw Signature</h3>
+        <canvas id="signaturePad" width="800" height="240"></canvas>
+        <div class="modal-actions">
+          <button id="sigClear">Clear</button>
+          <div class="spacer"></div>
+          <button id="sigCancel">Cancel</button>
+          <button id="sigDone" class="primary">Done</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="pdfiumkit.js?v=81"></script>
+    <script src="app.js?v=81"></script>
+  </body>
+  </html>
