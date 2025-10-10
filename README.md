@@ -174,7 +174,7 @@
 
   ## Acknowledgements
 
-  - Built on top of PDFium (Chromium) and its public C API.
+  - Built on top of [PDFium (Chromium)](https://github.com/chromium/pdfium) and its public C API.
 
   ———
 
