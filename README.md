@@ -41,6 +41,7 @@
 
   Quick start (Java):
 
+<pre>
   PdfiumDocument doc = new PdfiumDocument();
   doc.open("/sdcard/Download/sample.pdf"); // optional password overload available
   long page = doc.loadPage(0);
@@ -61,6 +62,8 @@
   doc.closePage(page);
   doc.close();
 
+</pre>
+
   Notes:
 
   - Ensure you’ve built/placed libpdfium.a for each ABI under out/android/release/lib/<abi>/.
@@ -73,6 +76,7 @@
   - Bundled pdfium.xcframework is in ios/PdfiumKit/lib/pdfium.xcframework
 
   Quick start (Swift):
+<pre>
 
   import PdfiumKit
 
@@ -88,6 +92,7 @@
   }
 
   try doc.save(to: outputURL)
+</pre>
 
   Notes:
 
@@ -109,6 +114,7 @@
   - Node: npx serve web
 
   Quick start (JS):
+<pre>
 
   const adapter = new PdfiumAdapter();
   await adapter.init();
@@ -134,6 +140,7 @@
 
   adapter.closePage(page);
   adapter.closeDocument(doc);
+</pre>
 
   Notes:
 
