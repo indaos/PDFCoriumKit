@@ -176,11 +176,3 @@
 
   - Built on top of [PDFium (Chromium)](https://github.com/chromium/pdfium) and its public C API.
 
-  ———
-
-  Where should I save this?
-
-  - Option A: PdfiumKit/README.md (treats the PdfiumKit folder as repo root)
-  - Option B: README.md at the current root, with paths prefixed by PdfiumKit/
-
-  Tell me which you prefer, and I’ll create the file.
