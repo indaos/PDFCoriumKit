@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_open"
+        android:title="Open"
+        android:icon="@android:drawable/ic_menu_upload"
+        app:showAsAction="always" />
+    <item android:id="@+id/action_prev"
+        android:title="Prev"
+        android:icon="@android:drawable/ic_media_previous"
+        app:showAsAction="always" />
+    <item android:id="@+id/action_next"
+        android:title="Next"
+        android:icon="@android:drawable/ic_media_next"
+        app:showAsAction="always" />
+    <item android:id="@+id/action_zoom_out"
+        android:title="-"
+        android:icon="@android:drawable/ic_menu_zoom"
+        app:showAsAction="always" />
+    <item android:id="@+id/action_zoom_in"
+        android:title="+"
+        android:icon="@android:drawable/ic_menu_zoom"
+        app:showAsAction="always" />
+    <item android:id="@+id/action_fill"
+        android:title="Fill"
+        android:icon="@android:drawable/ic_menu_edit"
+        app:showAsAction="always" />
+    <item android:id="@+id/action_draw"
+        android:title="Draw"
+        android:icon="@android:drawable/ic_menu_edit"
+        app:showAsAction="always" />
+    <item android:id="@+id/action_save"
+        android:title="Save"
+        android:icon="@android:drawable/ic_menu_save"
+        app:showAsAction="always" />
+</menu>
