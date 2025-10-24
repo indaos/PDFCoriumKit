@@ -1,6 +1,9 @@
- # PdfiumKit
+This project wraps the open‑source PDFium library
+Built on top of [PDFium (Chromium)](https://github.com/chromium/pdfium) and its public C API.
 
-  Cross‑platform PDF tooling built on PDFium with Android, iOS, and Web implementations and demos. PdfiumKit focuses on a minimal, pragmatic surface over PDFium for opening, rendering, annotating, basic form
+ # PDFCoriumKit
+
+  Cross‑platform PDF tooling built on PDFium with Android, iOS, and Web implementations and demos. PDFCoriumKit focuses on a minimal, pragmatic surface over PDFium for opening, rendering, annotating, basic form
   filling, and saving.
 
   - Android: JNI bridge + demo app
@@ -174,5 +177,4 @@
 
   ## Acknowledgements
 
-  - Built on top of [PDFium (Chromium)](https://github.com/chromium/pdfium) and its public C API.
 
