@@ -168,3 +168,34 @@ Refer to the upstream PDFium build documentation for platform‑specific steps (
 
 - Built on [PDFium (Chromium)](https://github.com/chromium/pdfium).
 
+## Releases
+
+### Android
+
+- Prereqs: JDK 17, Android SDK, NDK 26.1.10909125, CMake 3.22.1.
+- Provide PDFium for Android:
+  - Headers at `src-android/pdfium/public` (path contains `public/fpdfview.h`).
+  - Static libs at `out/android/release/lib/<abi>/libpdfium.a` for `armeabi-v7a`, `arm64-v8a`, `x86`, `x86_64`.
+- Build AAR:
+  - `cd android`
+  - `./gradlew :pdfiumkit:assembleRelease`
+  - Artifact: `android/pdfiumkit/build/outputs/aar/pdfiumkit-release.aar`
+- Note: The module is wired to link against `libpdfium.a`. 
+
+### iOS
+
+- Prereqs: Xcode (CLT) on macOS.
+- Build XCFramework:
+  - `cd ios/PdfiumKit`
+  - `./build_xcframework.sh`
+  - Artifact: `ios/PdfiumKit/build/PdfiumKit.xcframework`
+- The script auto-detects headers from `ios/PdfiumKit/lib/pdfium.xcframework`, so no extra setup is needed.
+
+### Web
+
+- Prereqs: none (assets already built).
+- Publish/Serve:
+  - The `web/` folder is ready to host as-is. 
+  - Serve locally for testing: `cd web && python3 -m http.server` or `npx serve web`.
+  - For deployment, copy the contents of `web/` to your static host or CDN. Ensure `lib/pdfium.wasm` is served with MIME `application/wasm` and appropriate CORS if loaded cross-origin.
+
