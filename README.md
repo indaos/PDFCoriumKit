@@ -1,4 +1,4 @@
-# PdfiumKit
+# PDFCoriumKit
 
 Cross‑platform PDF tooling built on the open‑source PDFium engine (Chromium) via its public C API. 
 
