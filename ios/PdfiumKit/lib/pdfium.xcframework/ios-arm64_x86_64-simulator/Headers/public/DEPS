@@ -1,2 +1,0 @@
-# public/ needs to be standalone; don't inherit any include rules.
-noparent = True
